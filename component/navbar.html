@@ -1,1 +1,59 @@
-this is navbar
+<nav class="navbar navbar-expand-sm bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="<?!= baseUrl ?>?v=index">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?!= baseUrl ?>?v=tags">Tags</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?!= baseUrl ?>?v=draft">Draft</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?!= baseUrl ?>?v=pickup">Pick Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?!= baseUrl ?>?v=watch">Watch</a>
+        </li>
+      </ul>
+
+aaa if (page == "index") { aaa
+
+      <button type="button" class="btn  btn-sm text-decoration-underline" data-bs-toggle="modal" data-bs-target="#newPlayerModal" onclick="handleNewPlayerClick(this)">new player...</button>
+      <form class="row row-cols-lg-auto g-3 align-items-center d-flex" onsubmit="return false;" >
+        <div class="col-auto">
+          <!-- sample: https://getbootstrap.com/docs/5.3/forms/form-control/#datalists -->
+          <input class="form-control form-control-lg" list="datalistOptions" id="inputPlayerName" placeholder="🏀..." onchange="handlePlayerChange(event)">
+          <datalist id="datalistOptions">
+            aaa for (var i = 0; i < options.players.length; i++) { aaa          
+            <option data-value="aaa options.players[i].id aaa" value="aaa options.players[i].name aaa"></option>
+            aaa } aaa
+          </datalist>
+          <input type="hidden" id="inputPlayerNameHidden" />
+          <input type="hidden" id="inputPlayerID" />
+        </div>
+        <div class="col-auto">
+          <span class="btn btn-outline-secondary form-control-lg" onclick="handleClearButtonClick()">🗑</span>
+        </div>
+        <div class="col-auto">
+          <span class="btn btn-outline-secondary form-control-lg" onclick="handlePreviousPlayerButtonClick(this)">◀</span>
+        </div>
+        <div class="col-auto">
+          <span class="btn btn-outline-secondary form-control-lg" onclick="handleNextPlayerButtonClick(this)">▶</span>
+        </div>
+        <div class="col-auto">
+          <span class="btn btn-outline-secondary form-control-lg" onclick="handleNextNoDraftInfoPlayerButtonClick(this)">📚</span>
+        </div>
+      </form>
+aaa } aaa
+      <!--
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      -->
+    </div>
+  </div>
+</nav>
