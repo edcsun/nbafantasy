@@ -1,0 +1,52 @@
+
+  #playerNameLink {
+    text-decoration: none !important;
+  }
+
+  #rankTable tbody th, #playerStatsTable tbody th {
+    width: 15%;
+  }
+
+  .highlightPeriodButton {
+    cursor: pointer;
+  }
+  #playerStatsTable tr.highlighted th,
+  #playerStatsTable tr.highlighted td,
+  #rankTable th.highlighted,
+  #rankTable td.highlighted {
+    color: red;
+    text-shadow: 1px 1px 2px grey;
+  }
+  .accordion-button {
+    padding-left: 10px !important;
+    padding-top: 7px !important;
+    padding-bottom: 9px !important;
+  }
+
+  .update-passed {
+    color: grey;
+    font-size:10px;
+  }
+  .minus-cats {
+    font-size: small;
+    color: grey;
+  }
+  .schedule-tr
+  {
+    font-size: small;
+  }
+  .schedule-tr[data-schedule-type="upcoming"] .schedule-th div:not(.spinner-grow):nth-child(even),
+  .schedule-tr[data-schedule-type="upcoming"] .league-roster-count-td div:not(.spinner-grow):nth-child(even)
+  {
+    background-color: floralwhite;
+  }
+  .schedule-tr[data-schedule-type="playoff"] .schedule-th div:not(.spinner-grow):nth-child(even),
+  .schedule-tr[data-schedule-type="playoff"] .league-roster-count-td div:not(.spinner-grow):nth-child(even)
+  {
+    background-color: whitesmoke;
+  }
+  .schedule-th div:not(.spinner-grow):nth-child(odd),
+  .league-roster-count-td div:not(.spinner-grow):nth-child(odd)
+  {
+    background-color: white;
+  }
